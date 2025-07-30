@@ -1,0 +1,24 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cms-upload
+  namespace: openshift-gitops
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/redhat-gpte-devopsautomation/lb1816-summit-llm-aas
+    targetRevision: main
+    path: bootstrap/3scale/cms-upload
+    helm:
+      values: |
+        hook:
+          pre:
+            hostPattern: maas-admin.{{ .Values.deployer.domain }}
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: 3scale
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: false

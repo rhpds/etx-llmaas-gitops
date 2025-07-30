@@ -1,0 +1,42 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: bootstrap
+  namespace: openshift-gitops
+spec:
+  generators:
+  - list:
+      elements:
+      - cluster: in-cluster
+        name: model-serving
+        repoURL: https://github.com/redhat-gpte-devopsautomation/lb1816-summit-llm-aas.git
+        targetRevision: main
+        path: bootstrap/model-serving 
+      - cluster: in-cluster
+        name: rh-sso
+        repoURL: https://github.com/redhat-gpte-devopsautomation/lb1816-summit-llm-aas.git
+        targetRevision: main
+        path: bootstrap/rh-sso     
+#      - cluster: in-cluster
+#        name: three-scale
+#        repoURL: https://github.com/redhat-gpte-devopsautomation/lb1816-summit-llm-aas.git
+#        targetRevision: main
+#        path: bootstrap/3scale
+  template:
+    metadata:
+      name: '{{name}}'
+      namespace: openshift-gitops
+      labels:
+        component: bootstrap
+        purpose: '{{name}}'
+    spec:
+      project: default
+      source:
+        repoURL: '{{repoURL}}'
+        targetRevision: '{{targetRevision}}'
+        path: '{{path}}'
+      destination:
+        server: 'https://kubernetes.default.svc'
+      syncPolicy:
+        syncOptions:
+          - RespectIgnoreDifferences=true
