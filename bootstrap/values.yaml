@@ -1,0 +1,39 @@
+# Default values for bootstrap.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+deployer:
+  domain: apps.cluster-guid.guid.sandbox.opentlc.com
+
+threeScale:
+  namespace: 3scale
+  repoURL: https://github.com/rhpds/ocp-cluster-addons
+  targetRevision: main
+  path: 3scale
+  channel: threescale-2.15
+  startingCSV: 3scale-operator.v0.12.3
+
+cmsUpload:
+  repoURL: https://github.com/rhpds/etx-llmaas-gitops
+  targetRevision: main
+  path: 3scale/cms-upload
+
+llmaas:
+  repoURL: https://github.com/rhpds/etx-llmaas-gitops
+  targetRevision: main
+  path: model-serving
+
+slackMcpSecret:
+  namespace: llama-serve
+  name: slack-secret
+  path: mcp_servers
+  slackBotToken: secret
+  slackTeamId: secret
+  graniteToken: secret
+  llamaToken: secret
+
+llama:
+  repoURL: https://github.com/rhpds/etx-llmaas-gitops
+  targetRevision: main
+  path: kubernetes/kustomize/overlay/demo
+  namespace: llama-serve
