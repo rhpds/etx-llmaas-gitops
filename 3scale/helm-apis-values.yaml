@@ -1,7 +1,7 @@
 # https://github.com/3scale/3scale-operator/blob/master/doc/product-reference.md
 apis:
   - name: granite-3dot2-8b-instruct
-    activeDocOpenAPIRef: https://github.com/rhpds/etx-llmaas-gitops/raw/refs/heads/main/3scale/api_definitions/granite-3dot2-8b-instruct.json
+    activeDocOpenAPIRef: https://github.com/redhat-gpte-devopsautomation/private-llm-aas/raw/refs/heads/main/3scale/api_definitions/granite-3dot2-8b-instruct.json
     backend:
       privateBaseURL: http://granite-3dot2-8b-instruct-predictor.llm-hosting.svc.cluster.local:8080
       path: /

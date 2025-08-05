@@ -1,0 +1,9 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - llama-guard-inferenceservice.yaml
+  - llama-guard-oci-data-connection.yaml
+  - llama-guard-servingruntime.yaml
+  - llama-guard-route.yaml
+
+namespace: llm-hosting

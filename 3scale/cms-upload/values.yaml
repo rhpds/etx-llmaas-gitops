@@ -37,7 +37,7 @@ hook:
       syncwave: "1"
 
 git:
-  repo: https://github.com/rhpds/etx-llmaas-gitops.git
+  repo: https://github.com/redhat-gpte-devopsautomation/private-llm-aas.git
   ref: main
 
 cms:

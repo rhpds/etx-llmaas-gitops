@@ -44,8 +44,17 @@ spec:
           - name: user1
             password: openshift
             service: granite-3dot2-8b-instruct
-    - repoURL: https://github.com/rhpds/etx-llmaas-gitops
-      targetRevision: main
+          - name: user2
+            password: openshift
+            service: granite-3dot2-8b-instruct
+          - name: user3
+            password: openshift
+            service: granite-3dot2-8b-instruct
+          - name: user9
+            password: openshift
+            service: granite-3dot2-8b-instruct
+    - repoURL: https://github.com/redhat-gpte-devopsautomation/private-llm-aas
+      targetRevision: updated
       ref: values
   destination:
     namespace: {{ .Values.threeScale.namespace }}

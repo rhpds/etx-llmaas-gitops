@@ -20,7 +20,7 @@ spec:
         - '--port=8080'
         - '--model=/mnt/models'
         - '--distributed-executor-backend=mp'
-        - '--max-model-len=6144'
+        - '--max-model-len=130000'
         - '--dtype=half'
         - '--served-model-name=ibm-granite/granite-3.2-8b-instruct'
         - '--enable-auto-tool-choice'

@@ -1,0 +1,14 @@
+kind: Secret
+apiVersion: v1
+metadata:
+  name: llama-guard-3-1b
+  labels:
+    opendatahub.io/dashboard: 'true'
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+    opendatahub.io/connection-type-ref: uri-v1
+    openshift.io/description: ''
+    openshift.io/display-name: llama-guard-3-1b
+data:
+  URI: b2NpOi8vcXVheS5pby9yaC1haXNlcnZpY2VzLWJ1L2xsYW1hLWd1YXJkLTMtMWItbW9kZWxjYXI6Mi4wLjAK
+type: Opaque
