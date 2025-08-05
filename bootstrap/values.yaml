@@ -8,19 +8,19 @@ deployer:
 threeScale:
   namespace: 3scale
   repoURL: https://github.com/rhpds/ocp-cluster-addons
-  targetRevision: main
+  targetRevision: updated
   path: 3scale
   channel: threescale-2.15
   startingCSV: 3scale-operator.v0.12.3
 
 cmsUpload:
   repoURL: https://github.com/rhpds/etx-llmaas-gitops
-  targetRevision: main
+  targetRevision: updated
   path: 3scale/cms-upload
 
 llmaas:
   repoURL: https://github.com/rhpds/etx-llmaas-gitops
-  targetRevision: main
+  targetRevision: updated
   path: model-serving
 
 slackMcpSecret:
@@ -34,6 +34,6 @@ slackMcpSecret:
 
 llama:
   repoURL: https://github.com/rhpds/etx-llmaas-gitops
-  targetRevision: main
+  targetRevision: updated
   path: kubernetes/kustomize/overlay/demo
   namespace: llama-serve
