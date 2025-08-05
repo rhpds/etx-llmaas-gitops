@@ -8,7 +8,7 @@ deployer:
 threeScale:
   namespace: 3scale
   repoURL: https://github.com/rhpds/ocp-cluster-addons
-  targetRevision: updated
+  targetRevision: main
   path: 3scale
   channel: threescale-2.15
   startingCSV: 3scale-operator.v0.12.3
