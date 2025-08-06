@@ -15,25 +15,10 @@ threeScale:
 
 cmsUpload:
   repoURL: https://github.com/rhpds/etx-llmaas-gitops
-  targetRevision: updated
+  targetRevision: main
   path: 3scale/cms-upload
 
 llmaas:
   repoURL: https://github.com/rhpds/etx-llmaas-gitops
-  targetRevision: updated
+  targetRevision: main
   path: model-serving
-
-slackMcpSecret:
-  namespace: llama-serve
-  name: slack-secret
-  path: mcp_servers
-  slackBotToken: secret
-  slackTeamId: secret
-  graniteToken: secret
-  llamaToken: secret
-
-llama:
-  repoURL: https://github.com/rhpds/etx-llmaas-gitops
-  targetRevision: updated
-  path: kubernetes/kustomize/overlay/demo
-  namespace: llama-serve
