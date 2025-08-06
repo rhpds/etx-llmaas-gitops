@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: Delivery
+  name: delivery
   namespace: openshift-gitops
   annotations:
     argocd.argoproj.io/sync-options: Validate=false  
