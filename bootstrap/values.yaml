@@ -22,3 +22,8 @@ llmaas:
   repoURL: https://github.com/rhpds/etx-llmaas-gitops
   targetRevision: main
   path: model-serving
+
+delivery:
+  repoURL: https://github.com/rhpds/etx-llmaas-gitops
+  targetRevision: main
+  path: delivery
