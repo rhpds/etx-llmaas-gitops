@@ -6,26 +6,6 @@ commonLabels:
   component: aiworkshop
 
 resources:
-- namespace.yaml
-# wave 0
-- user1-to-admin.yaml
-- workbench-imagestream.yaml
+- nvidia-dashboard-config/
 - odh-dashboard-config.yaml
-#- granite-8b/oci-data-connection.yaml
-#- granite-8b/servingruntime.yaml
-- vllm-runtime-granite.yaml
-- vllm-runtime-granite-2-22.yaml
-- vllm-runtime-cpu-template.yaml
-# wave 1
-- project-manager.yaml
-- secret-aws-connection-llm-hosting.yaml
-- create-odh-tec-workbench.yaml
-- nvidia-gpu-monitoring-dashboard-job.yaml
-- anythingllm-connection-type-configmap.yaml
-- images-puller.yaml
-- 3scale-network-policy.yaml
-# wave 2
-- granite-inference-raw-2-22.yaml
-#- granite-inference-raw.yaml
-#- granite-8b/inferenceservice.yaml
-#- llama-guard/
+- user1-to-admin.yaml
