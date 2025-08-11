@@ -11,3 +11,10 @@ resources:
 
 # components:
 # - ./nvidia-console-plugin
+helmGlobals:
+  chartHome: ../.helm/charts
+helmCharts:
+  - name: image-puller
+    releaseName: image-puller
+    version: 0.1.0
+    valuesFile: image-puller-values.yaml
