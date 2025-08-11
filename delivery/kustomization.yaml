@@ -7,7 +7,4 @@ commonLabels:
 
 resources:
 - namespace.yaml
-# - image-puller.yaml
-
-# components:
-# - ./nvidia-console-plugin
+- ./image-puller/
