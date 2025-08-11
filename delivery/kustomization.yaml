@@ -6,6 +6,6 @@ commonLabels:
   component: delivery
 
 resources:
+- ./image-puller/
 - ./multi-node-setup/
 - namespace.yaml
-- ./image-puller/
