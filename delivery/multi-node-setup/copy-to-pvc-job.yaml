@@ -1,0 +1,57 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: copy-llama-to-pvc
+  labels:
+    name: copy-llama-to-pvc
+spec:
+  volumes:
+    - name: llama-model
+      persistentVolumeClaim:
+        claimName: llama-model
+  restartPolicy: Never
+  initContainers:
+    - name: fix-volume-permissions
+      image: quay.io/quay/busybox@sha256:92f3298bf80a1ba949140d77987f5de081f010337880cd771f7e7fc928f8c74d
+      command: ["sh"]
+      args: ["-c", "mkdir -p /mnt/models/$(MODEL_PATH) && chmod -R 777 /mnt/models"] 
+      volumeMounts:
+        - mountPath: "/mnt/models/"
+          name: llama-model
+      env:
+        - name: MODEL_PATH
+          value: TinyLlama/TinyLlama-1.1B-Chat-v1.0 #todo: update this once the llama 70b model is available
+  containers:
+    - resources:
+        requests:
+          memory: 12Gi
+      name: download-model
+      imagePullPolicy: IfNotPresent
+      image: quay.io/opendatahub/kserve-storage-initializer:v0.14 
+      args:
+        - 's3://$(BUCKET_NAME)/$(SOURCE_MODEL_PATH)/'
+        - /mnt/models/$(TARGET_MODEL_PATH)
+      env:
+        - name: AWS_ACCESS_KEY_ID
+          value: minio
+        - name: AWS_SECRET_ACCESS_KEY
+          value: minio123
+        - name: BUCKET_NAME
+          value: models
+        - name: SOURCE_MODEL_PATH
+          value: TinyLlama/TinyLlama-1.1B-Chat-v1.0 #todo: update this once the llama 70b model is available
+        - name: TARGET_MODEL_PATH
+          value: TinyLlama-1.1B-Chat-v1.0 #todo: update this once the llama 70b model is available
+        - name: S3_USE_HTTPS
+          value: "1"
+        - name: AWS_ENDPOINT_URL
+          value: http://minio.ic-shared-minio.svc.cluster.local:9000
+        - name: awsAnonymousCredential
+          value: 'false'
+        - name: AWS_DEFAULT_REGION
+          value: US-EAST-1
+        - name: S3_VERIFY_SSL
+          value: 'true' 
+      volumeMounts:
+        - mountPath: "/mnt/models/"
+          name: llama-model
