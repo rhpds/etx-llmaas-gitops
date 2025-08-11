@@ -10,6 +10,12 @@ images:
   - name: granite-guardian-32-5b
     image: quay.io/redhat-ai-services/modelcar-catalog
     tag: granite-guardian-3.2-5b
+  - name: kn-serving-queue
+    image: registry.redhat.io/openshift-serverless-1/kn-serving-queue-rhel8
+    tag: sha256:be27abd8e30d0e9b0245d5d99800290231aa246931bdbf65a757eac49f7d9ad9
+  - name: proxyv2
+    image: registry.redhat.io/openshift-service-mesh/proxyv2-rhel9
+    tag: sha256:38d15f49e49e3114c4a470ec59c0e317c741c6c33a23839e4f8425136418756b
 
 tolerations:
   - key: nvidia.com/gpu
