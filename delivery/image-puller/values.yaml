@@ -13,9 +13,6 @@ images:
   - name: granite-31-8b-instruct-w8a8
     image: quay.io/redhat-ai-services/modelcar-catalog
     tag: granite-3.1-8b-instruct-quantized.w8a8
-  - name: granite-33-2b-instruct
-    image: quay.io/redhat-ai-services/modelcar-catalog
-    tag: granite-3.3-2b-instruct
   - name: kn-serving-queue
     image: registry.redhat.io/openshift-serverless-1/kn-serving-queue-rhel8
     tag: sha256:be27abd8e30d0e9b0245d5d99800290231aa246931bdbf65a757eac49f7d9ad9
