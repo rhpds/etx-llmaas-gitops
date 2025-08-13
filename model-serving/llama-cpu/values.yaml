@@ -2,6 +2,8 @@ fullnameOverride: llama-32-1b-instruct-cpu
 
 model:
   uri: oci://quay.io/redhat-ai-services/modelcar-catalog:llama-3.2-1b-instruct
+  args:
+    - --max-model-len=2000
 
 deploymentMode: RawDeployment
 
