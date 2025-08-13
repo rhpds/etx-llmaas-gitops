@@ -3,7 +3,7 @@ namespace: image-puller
 images:
   - name: vllm
     image: quay.io/modh/vllm
-    tag: "sha256:79e1f24bba1d3e694f47f66ba9f8184e70310a10b77bf11c0febd0c926234950"
+    tag: rhoai-2.22-cuda
   - name: granite-33-8b-instruct
     image: quay.io/redhat-ai-services/modelcar-catalog
     tag: granite-3.3-8b-instruct
