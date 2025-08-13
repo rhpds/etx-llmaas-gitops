@@ -8,5 +8,4 @@ commonLabels:
 resources:
 - ./llama-cpu/
 - namespace.yaml
-- user1-to-admin.yaml
 - 3scale-network-policy.yaml
