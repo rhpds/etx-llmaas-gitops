@@ -8,4 +8,3 @@ commonLabels:
 resources:
 - namespace.yaml
 - ./image-puller/
-- gpu-accelerator-profile.yaml
