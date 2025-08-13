@@ -5,6 +5,10 @@ model:
 
 deploymentMode: RawDeployment
 
+endpoint:
+  externalRoute:
+    enabled: false
+
 image: 
   image: quay.io/rh-aiservices-bu/vllm-cpu-openai-ubi9
   tag: "0.3"
