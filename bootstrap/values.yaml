@@ -8,7 +8,7 @@ deployer:
 threeScale:
   namespace: 3scale
   repoURL: https://github.com/rhpds/ocp-cluster-addons
-  targetRevision: main
+  targetRevision: llama-cpu
   path: 3scale
   channel: threescale-2.15
   startingCSV: 3scale-operator.v0.12.3
@@ -20,15 +20,15 @@ cmsUpload:
 
 llmaas:
   repoURL: https://github.com/rhpds/etx-llmaas-gitops
-  targetRevision: main
+  targetRevision: llama-cpu
   path: model-serving
 
 delivery:
   repoURL: https://github.com/rhpds/etx-llmaas-gitops
-  targetRevision: main
+  targetRevision: llama-cpu
   path: delivery
 
 rhoaiConfig:
   repoURL: https://github.com/rhpds/etx-llmaas-gitops
-  targetRevision: main
+  targetRevision: llama-cpu
   path: rhoai-config
