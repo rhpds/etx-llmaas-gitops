@@ -20,15 +20,15 @@ cmsUpload:
 
 llmaas:
   repoURL: https://github.com/rhpds/etx-llmaas-gitops
-  targetRevision: rhoai-config
+  targetRevision: main
   path: model-serving
 
 delivery:
   repoURL: https://github.com/rhpds/etx-llmaas-gitops
-  targetRevision: rhoai-config
+  targetRevision: main
   path: delivery
 
 rhoaiConfig:
   repoURL: https://github.com/rhpds/etx-llmaas-gitops
-  targetRevision: rhoai-config
+  targetRevision: main
   path: rhoai-config
