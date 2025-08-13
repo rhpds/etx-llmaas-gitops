@@ -10,7 +10,6 @@ resources:
 # wave 0
 - user1-to-admin.yaml
 - workbench-imagestream.yaml
-- odh-dashboard-config.yaml
 #- granite-8b/oci-data-connection.yaml
 #- granite-8b/servingruntime.yaml
 - vllm-runtime-granite.yaml
@@ -20,7 +19,6 @@ resources:
 - project-manager.yaml
 - secret-aws-connection-llm-hosting.yaml
 - create-odh-tec-workbench.yaml
-- nvidia-gpu-monitoring-dashboard-job.yaml
 - anythingllm-connection-type-configmap.yaml
 - images-puller.yaml
 - 3scale-network-policy.yaml
