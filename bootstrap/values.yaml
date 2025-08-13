@@ -27,3 +27,8 @@ delivery:
   repoURL: https://github.com/rhpds/etx-llmaas-gitops
   targetRevision: main
   path: delivery
+
+rhoaiConfig:
+  repoURL: https://github.com/rhpds/etx-llmaas-gitops
+  targetRevision: rhoai-config
+  path: rhoai-config

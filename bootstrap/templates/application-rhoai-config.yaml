@@ -12,9 +12,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: {{ .Values.delivery.repoURL }}
-    targetRevision: {{ .Values.delivery.targetRevision }}
-    path: {{ .Values.delivery.path }}
+    repoURL: {{ .Values.rhoaiConfig.repoURL }}
+    targetRevision: {{ .Values.rhoaiConfig.targetRevision }}
+    path: {{ .Values.rhoaiConfig.path }}
   destination:
     server: https://kubernetes.default.svc
   syncPolicy:
