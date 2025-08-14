@@ -20,7 +20,7 @@ spec:
           name: llama-model
       env:
         - name: MODEL_PATH
-          value: TinyLlama/TinyLlama-1.1B-Chat-v1.0 #todo: update this once the llama 70b model is available
+          value: rh-llama-3.3-70B-instruct-quantized
   containers:
     - resources:
         requests:
@@ -39,9 +39,9 @@ spec:
         - name: BUCKET_NAME
           value: models
         - name: SOURCE_MODEL_PATH
-          value: TinyLlama/TinyLlama-1.1B-Chat-v1.0 #todo: update this once the llama 70b model is available
+          value: rh-llama-3.3-70B-instruct-quantized
         - name: TARGET_MODEL_PATH
-          value: TinyLlama-1.1B-Chat-v1.0 #todo: update this once the llama 70b model is available
+          value: Llama-3.3-70B-Instruct-quantized.w4a16
         - name: S3_USE_HTTPS
           value: "1"
         - name: AWS_ENDPOINT_URL
