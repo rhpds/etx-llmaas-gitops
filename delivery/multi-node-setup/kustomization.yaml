@@ -8,5 +8,6 @@ commonLabels:
   component: delivery
 
 resources:
+  - copy-to-pvc-job.yaml
   - pvc.yaml
   
