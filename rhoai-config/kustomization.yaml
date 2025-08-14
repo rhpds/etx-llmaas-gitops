@@ -9,3 +9,4 @@ resources:
   - nvidia-dashboard-config/
   - gpu-accelerator-profile.yaml
   - odh-dashboard-config.yaml
+  - user1-to-admin.yaml

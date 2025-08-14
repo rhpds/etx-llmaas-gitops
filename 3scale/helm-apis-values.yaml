@@ -1,9 +1,9 @@
 # https://github.com/3scale/3scale-operator/blob/master/doc/product-reference.md
 apis:
-  - name: granite-3dot2-8b-instruct
-    activeDocOpenAPIRef: https://github.com/redhat-gpte-devopsautomation/private-llm-aas/raw/refs/heads/main/3scale/api_definitions/granite-3dot2-8b-instruct.json
+  - name: llama-32-1b-instruct-cpu
+    activeDocOpenAPIRef: https://github.com/rhpds/etx-llmaas-gitops/raw/refs/heads/main/3scale/api_definitions/llama-32-1b-instruct.json
     backend:
-      privateBaseURL: http://granite-3dot2-8b-instruct-predictor.llm-hosting.svc.cluster.local:8080
+      privateBaseURL: http://llama-32-1b-instruct-cpu-predictor.llm-hosting.svc.cluster.local:8080
       path: /
     deployment:
       apicastHosted:
