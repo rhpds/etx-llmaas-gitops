@@ -54,7 +54,7 @@ spec:
             password: openshift
             service: granite-3dot2-8b-instruct
     - repoURL: https://github.com/rhpds/etx-llmaas-gitops
-      targetRevision: llama-cpu
+      targetRevision: main
       ref: values
   destination:
     namespace: {{ .Values.threeScale.namespace }}
