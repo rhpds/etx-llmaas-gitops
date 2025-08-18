@@ -1,0 +1,5 @@
+---
+resources:
+  - issuer.yaml
+  - certificate.yaml
+  - secrets.yaml

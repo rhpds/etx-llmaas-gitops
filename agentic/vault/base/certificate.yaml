@@ -14,5 +14,5 @@ spec:
     kind: Issuer
   dnsNames:
     - vault.apps.*
-    - vault-active.{{ .Release.Namespace }}.svc
-    - vault-internal.{{ .Release.Namespace }}.svc
+    - vault-active.vault.svc
+    - vault-internal.vault.svc
