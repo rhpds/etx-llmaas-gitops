@@ -3,5 +3,4 @@ resources:
   - argocd-subscription.yaml
   - operators.yaml
   - setup-cr.yaml
-  - vault-base.yaml
-  - chart/
+  - vault/overlay
