@@ -18,7 +18,7 @@ spec:
   destination:
     server: https://kubernetes.default.svc
   ignoreDifferences:
-    - group: apps
+    - group: apps/v1
       kind: StatefulSet
       name: vault
       namespace: vault
