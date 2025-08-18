@@ -484,7 +484,6 @@ subjects:
 roleRef:
   kind: Role
   name: permissions
-  namespace: openshift-policy
   apiGroup: rbac.authorization.k8s.io
 ---
 apiVersion: rbac.authorization.k8s.io/v1
