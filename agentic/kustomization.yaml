@@ -4,14 +4,4 @@ resources:
   - operators.yaml
   - setup-cr.yaml
   - vault-base.yaml
-
-# helmGlobals:
-#   chartHome: .
-
-# helmCharts:
-#   - name: vault
-#     namespace: vault
-#     includeCRDs: false
-#     valuesFile: vault/values.yaml
-#     version: 0.0.1
-#     releaseName: vault
+  - chart/
