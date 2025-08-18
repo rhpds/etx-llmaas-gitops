@@ -19,3 +19,4 @@ spec:
     automated: {}
     syncOptions:
       - SkipDryRunOnMissingResource=true
+      - Retry=true
