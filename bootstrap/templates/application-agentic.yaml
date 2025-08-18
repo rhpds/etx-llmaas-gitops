@@ -23,7 +23,7 @@ spec:
       name: vault
       namespace: vault
       jsonPointers:
-        - /status
+        - /status/availableReplicas
   syncPolicy:
     automated: {}
     syncOptions:
