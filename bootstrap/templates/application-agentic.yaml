@@ -17,6 +17,11 @@ spec:
     path: {{ .Values.agenticConfig.path }}
   destination:
     server: https://kubernetes.default.svc
+  ignoreDifferences:
+    - group: apps
+      kind: StatefulSet
+      name: vault
+      namespace: vault
   syncPolicy:
     automated: {}
     syncOptions:
