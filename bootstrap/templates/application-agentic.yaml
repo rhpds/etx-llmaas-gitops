@@ -4,8 +4,6 @@ kind: Application
 metadata:
   name: agentic-config
   namespace: openshift-gitops
-  annotations:
-    argocd.argoproj.io/sync-options: Validate=false
   labels:
       component: bootstrap
       purpose: agentic-config
