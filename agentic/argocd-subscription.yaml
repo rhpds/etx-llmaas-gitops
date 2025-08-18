@@ -15,4 +15,4 @@ spec:
   installPlanApproval: Automatic
   name: openshift-gitops-operator
   source: redhat-operators
-  sourceNamespace: openshift-gitops-operator
+  sourceNamespace: openshift-marketplace
