@@ -5,13 +5,13 @@ resources:
   - setup-cr.yaml
   - vault-base.yaml
 
-helmGlobals:
-  chartHome: .
+# helmGlobals:
+#   chartHome: .
 
-helmCharts:
-  - name: vault
-    namespace: vault
-    includeCRDs: false
-    valuesFile: vault/values.yaml
-    version: 0.0.1
-    releaseName: vault
+# helmCharts:
+#   - name: vault
+#     namespace: vault
+#     includeCRDs: false
+#     valuesFile: vault/values.yaml
+#     version: 0.0.1
+#     releaseName: vault
