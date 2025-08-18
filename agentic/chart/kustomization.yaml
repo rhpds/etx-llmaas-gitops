@@ -7,5 +7,5 @@ helmCharts:
     namespace: vault
     includeCRDs: false
     valuesFile: vault/values.yaml
-    version: 0.0.1
+    version: 0.30.0
     releaseName: vault
