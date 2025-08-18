@@ -16,7 +16,7 @@ metadata:
   namespace: openshift-policy
   name: default
   annotations:
-    argocd.argoproj.io/sync-wave: "2"
+    argocd.argoproj.io/sync-wave: "3"
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 spec:
   clusterSet: default
@@ -27,7 +27,7 @@ metadata:
   name: global-policy
   namespace: openshift-policy
   annotations:
-    argocd.argoproj.io/sync-wave: "2"
+    argocd.argoproj.io/sync-wave: "3"
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 spec:
   argoServer:
@@ -47,7 +47,7 @@ metadata:
   name: placement-hub-openshift
   namespace: openshift-policy
   annotations:
-    argocd.argoproj.io/sync-wave: "2"
+    argocd.argoproj.io/sync-wave: "3"
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 spec:
   clusterSets:
@@ -498,4 +498,3 @@ subjects:
   - kind: ServiceAccount
     name: global-policy-argocd-application-controller
     namespace: openshift-policy
-
