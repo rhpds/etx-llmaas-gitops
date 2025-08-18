@@ -14,5 +14,5 @@ spec:
         value: 'openshift-gitops,openshift-policy'
   installPlanApproval: Automatic
   name: openshift-gitops-operator
-  source: redhat-operators-snapshot-gitops
+  source: redhat-operators
   sourceNamespace: openshift-gitops-operator
