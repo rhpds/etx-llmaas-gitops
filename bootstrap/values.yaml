@@ -32,3 +32,8 @@ rhoaiConfig:
   repoURL: https://github.com/rhpds/etx-llmaas-gitops
   targetRevision: main
   path: rhoai-config
+
+agenticConfig:
+  repoURL: https://github.com/rhpds/etx-llmaas-gitops
+  targetRevision: main
+  path: agentic

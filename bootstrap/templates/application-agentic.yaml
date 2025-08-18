@@ -1,0 +1,28 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: agentic-config
+  namespace: openshift-gitops
+  annotations:
+    argocd.argoproj.io/sync-options: Validate=false
+  labels:
+      component: bootstrap
+      purpose: agentic-config
+spec:
+  project: default
+  source:
+    repoURL: {{ .Values.agenticConfig.repoURL }}
+    targetRevision: {{ .Values.agenticConfig.targetRevision }}
+    path: {{ .Values.agenticConfig.path }}
+  destination:
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    retry:
+      limit: 20
+      backoff:
+        duration: 15s
+        factor: 2
+        maxDuration: 15m
+    syncOptions:
+      - SkipDryRunOnMissingResource=true
