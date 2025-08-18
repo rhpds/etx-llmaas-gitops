@@ -14,8 +14,6 @@ vault:
   ui:
     enabled: true
   server:
-    annotations:
-      argocd.argoproj.io/ignore-healthcheck: "true"
     image:
       repository: "registry.connect.redhat.com/hashicorp/vault"
       tag: "1.19.3-ubi"
