@@ -16,6 +16,48 @@ spec:
             claimName: llama-model
       restartPolicy: Never
       initContainers:
+        - name: wait-for-bucket-files
+          image: amazon/aws-cli:2.28.12
+          command: ["/bin/bash", "-c"]
+          args:
+          - |
+            echo "Starting check for S3 bucket: s3://${BUCKET_NAME}/${FOLDER_PREFIX}"
+            echo "Expecting exactly ${EXPECTED_COUNT} files."
+            
+            while true; do
+              file_count=$(aws s3 ls "s3://${BUCKET_NAME}/${SOURCE_MODEL_PATH}" --recursive --summarize | grep -E 'Total Objects: ' | awk '{print $3}')
+
+              if [[ -z "$file_count" ]]; then
+                  file_count=0
+              fi
+
+              if [[ "$file_count" -eq "$EXPECTED_COUNT" ]]; then
+                echo "SUCCESS: Found the expected number of files (${file_count})."
+                break
+              else
+                echo "Current file count is ${file_count}. Expected ${EXPECTED_COUNT}."
+                echo "Condition not met. Sleeping for ${SLEEP_INTERVAL} seconds..."
+                sleep "$SLEEP_INTERVAL"
+              fi
+            done
+
+            echo "Script finished."
+
+          env:
+            - name: AWS_ENDPOINT_URL
+              value: http://minio.ic-shared-minio.svc.cluster.local:9000
+            - name: AWS_ACCESS_KEY_ID
+              value: minio
+            - name: AWS_SECRET_ACCESS_KEY
+              value: minio123
+            - name: BUCKET_NAME
+              value: models
+            - name: SOURCE_MODEL_PATH
+              value: rh-llama-3.3-70B-instruct-quantized
+            - name: EXPECTED_COUNT
+              value: "17"
+            - name: SLEEP_INTERVAL
+              value: "60"
         - name: fix-volume-permissions
           image: quay.io/quay/busybox@sha256:92f3298bf80a1ba949140d77987f5de081f010337880cd771f7e7fc928f8c74d
           command: ["sh"]
