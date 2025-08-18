@@ -69,6 +69,9 @@ vault:
           service_registration "kubernetes" {}
     service:
       enabled: true
+    statefulSet:
+      annotations:
+        argocd.argoproj.io/ignore-healthcheck: "true"
     tolerations[0]:
       operator: Exists
       effect: NoSchedule
