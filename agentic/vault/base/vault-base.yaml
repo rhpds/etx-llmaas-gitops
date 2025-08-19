@@ -5,6 +5,8 @@ metadata:
   name: vault
   labels:
     openshift.io/cluster-monitoring: "true"
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
 ---
 apiVersion: v1
 data:
@@ -15,8 +17,7 @@ metadata:
   name: intermediate
   namespace: vault
   annotations:
-    "helm.sh/hook": post-install,post-upgrade
-    "helm.sh/hook-weight": "25"
+    argocd.argoproj.io/sync-wave: "-1"
 type: kubernetes.io/tls
 ---
 apiVersion: cert-manager.io/v1
@@ -25,8 +26,7 @@ metadata:
   name: int-ca-issuer
   namespace: vault
   annotations:
-    "helm.sh/hook": post-install,post-upgrade
-    "helm.sh/hook-weight": "25"
+    argocd.argoproj.io/sync-wave: "-1"
 spec:
   ca:
     secretName: intermediate
@@ -37,8 +37,7 @@ metadata:
   name: vault-certs
   namespace: vault
   annotations:
-    "helm.sh/hook": post-install,post-upgrade
-    "helm.sh/hook-weight": "25"
+    argocd.argoproj.io/sync-wave: "-1"
 spec:
   secretName: vault-certs
   issuerRef:
