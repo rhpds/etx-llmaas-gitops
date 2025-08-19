@@ -5,7 +5,6 @@ metadata:
   namespace: llm-hosting
   annotations:
     argocd.argoproj.io/managed-by: openshift-gitops
-    argocd.argoproj.io/sync-wave: "1"
 spec:
   podSelector: {}
   ingress:
