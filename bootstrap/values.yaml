@@ -37,3 +37,8 @@ agenticConfig:
   repoURL: https://github.com/rhpds/etx-llmaas-gitops
   targetRevision: main
   path: agentic
+
+webTerminal:
+  repoURL: https://github.com/rhpds/etx-llmaas-gitops
+  targetRevision: main
+  path: web-terminal

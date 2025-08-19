@@ -1,0 +1,21 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: web-terminal
+  namespace: openshift-gitops
+  annotations:
+    argocd.argoproj.io/sync-options: Validate=false  
+  labels:
+      component: bootstrap
+      purpose: web-terminal
+spec:
+  project: default
+  source:
+    repoURL: {{ .Values.webTerminal.repoURL }}
+    targetRevision: {{ .Values.webTerminal.targetRevision }}
+    path: {{ .Values.webTerminal.path }}
+  destination:
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated: {}
