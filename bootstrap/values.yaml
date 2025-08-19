@@ -41,4 +41,4 @@ agenticConfig:
 webTerminal:
   repoURL: https://github.com/rhpds/etx-llmaas-gitops
   targetRevision: main
-  path: web-terminal/aggregate/overlays/default
+  path: web-terminal/operator/overlays/fast
