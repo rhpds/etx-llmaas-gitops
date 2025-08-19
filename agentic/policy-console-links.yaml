@@ -37,7 +37,7 @@ spec:
                     imageURL: https://global-policy-server-openshift-policy.apps.{{ (lookup "config.openshift.io/v1" "DNS" "" "cluster").spec.baseDomain }}/assets/images/logo.png
                   href: https://global-policy-server-openshift-policy.apps.{{ (lookup "config.openshift.io/v1" "DNS" "" "cluster").spec.baseDomain }}
                   location: ApplicationMenu
-                  text: Agentic Argocd
+                  text: Agentic ArgoCD
     - objectDefinition:
         apiVersion: policy.open-cluster-management.io/v1
         kind: ConfigurationPolicy
