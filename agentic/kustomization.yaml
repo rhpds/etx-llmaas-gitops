@@ -4,3 +4,4 @@ resources:
   - operators.yaml
   - setup-cr.yaml
   - vault/overlay
+  - policy-console-links.yaml
