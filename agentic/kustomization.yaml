@@ -3,5 +3,6 @@ resources:
   - argocd-subscription.yaml
   - operators.yaml
   - setup-cr.yaml
+  - vault/base
   - vault/overlay
   - policy-console-links.yaml
