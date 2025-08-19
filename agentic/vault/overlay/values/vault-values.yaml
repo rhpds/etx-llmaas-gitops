@@ -15,6 +15,7 @@ ui:
 server:
   annotations:
     argocd.argoproj.io/ignore-healthcheck: "true"
+    argocd.argoproj.io/sync-wave: "4"
   image:
     repository: "registry.connect.redhat.com/hashicorp/vault"
     tag: "1.19.3-ubi"
@@ -73,6 +74,7 @@ server:
   statefulSet:
     annotations:
       argocd.argoproj.io/ignore-healthcheck: "true"
+      argocd.argoproj.io/sync-wave: "4"
   tolerations[0]:
     operator: Exists
     effect: NoSchedule
