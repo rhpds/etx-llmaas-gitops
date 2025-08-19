@@ -13,3 +13,5 @@ kustomize build --enable-helm agentic/ | oc apply -f-
 ```
 
 You will need to re-run this multiple times until success whilst CRDs install.
+
+NOTE: It is expected that the vault will be sealed and un-initialized at bootstrap time. So the ArgoCD Application will remain in Progressing until those activities have occurred.
