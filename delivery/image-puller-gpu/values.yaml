@@ -22,6 +22,9 @@ images:
   - name: ose-oauth-proxy-rhel9
     image: registry.redhat.io/openshift4/ose-oauth-proxy-rhel9
     tag: sha256:3bb1803cae39a31cc87bcf8affee0ad2576f1d2774a6c3de556adbbbc2687abc
+  - name: granite-3.1-2b-instruct
+    image: quay.io/redhat-ai-services/modelcar-catalog
+    tag: granite-3.1-2b-instruct
 
 tolerations:
   - key: nvidia.com/gpu

@@ -4,6 +4,9 @@ images:
   - name: replace-me
     image: registry.access.redhat.com/ubi9/ubi-micro
     tag: "9.6"
+  - name: llama-stack
+    image: quay.io/eformat/distribution-remote-vllm
+    tag: 0.2.15
 
 tolerations: []
 
