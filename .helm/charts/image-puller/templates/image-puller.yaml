@@ -18,7 +18,6 @@ spec:
     spec:
       containers:
       - name: image-puller
-        
         {{- if $image.tag | hasPrefix "sha256:" }}
         image: "{{$image.image }}@{{ $image.tag }}"
         {{- else }}

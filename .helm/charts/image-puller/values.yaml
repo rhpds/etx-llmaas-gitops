@@ -10,6 +10,12 @@ images:
   - name: granite-guardian-32-5b
     image: quay.io/redhat-ai-services/modelcar-catalog
     tag: granite-guardian-3.2-5b
+  - name: llama-stack
+    image: quay.io/eformat/distribution-remote-vllm
+    tag: 0.2.15
+  - name: granite-3.1-2b-instruct
+    image: quay.io/redhat-ai-services/modelcar-catalog
+    tag: granite-3.1-2b-instruct
 
 tolerations:
   - key: nvidia.com/gpu
