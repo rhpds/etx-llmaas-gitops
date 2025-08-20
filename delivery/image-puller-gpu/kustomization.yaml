@@ -1,4 +1,4 @@
----
+# Use this kustomization to pre-pull images to the GPU nodes
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 

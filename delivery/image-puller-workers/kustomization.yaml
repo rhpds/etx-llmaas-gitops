@@ -1,0 +1,12 @@
+# This is a kustomization to pre-pull images to the non-GPU worker nodes
+
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+helmGlobals:
+  chartHome: ../../.helm/charts
+helmCharts:
+  - name: image-puller
+    releaseName: image-puller
+    version: 0.1.0
+    valuesFile: values.yaml

@@ -1,0 +1,10 @@
+namespace: image-puller
+
+images:
+  - name: replace-me
+    image: registry.access.redhat.com/ubi9/ubi-micro
+    tag: "9.6"
+
+tolerations: []
+
+nodeSelector: ""
