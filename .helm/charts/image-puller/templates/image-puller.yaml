@@ -1,0 +1,42 @@
+{{- range $image := .Values.images }}
+---
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: image-puller-{{ $image.name }}
+  namespace: {{ $.Values.namespace }}
+  labels:
+    k8s-app: image-puller
+spec:
+  selector:
+    matchLabels:
+      name: image-puller-{{ $image.name }}
+  template:
+    metadata:
+      labels:
+        name: image-puller-{{ $image.name }}
+    spec:
+      containers:
+      - name: image-puller
+        {{- if $image.tag | hasPrefix "sha256:" }}
+        image: "{{$image.image }}@{{ $image.tag }}"
+        {{- else }}
+        image: "{{$image.image }}:{{ $image.tag }}"
+        {{- end }}
+        command: ["tail"]
+        args: ["-f", "/dev/null"]
+        resources:
+          limits:
+            memory: 20Mi
+          requests:
+            cpu: 10m
+            memory: 10Mi
+      {{- if $.Values.tolerations }}
+      tolerations:
+        {{- toYaml $.Values.tolerations | nindent 12 }}
+      {{- end }}
+      {{- if $.Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml $.Values.nodeSelector | nindent 12 }}
+      {{- end }}
+{{- end }}
