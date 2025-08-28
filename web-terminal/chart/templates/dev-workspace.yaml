@@ -7,6 +7,7 @@ metadata:
     controller.devfile.io/restricted-access: "true"
     argocd.argoproj.io/sync-options: Force=true,Replace=true,SkipDryRunOnMissingResource=true
     argocd.argoproj.io/sync-wave: "3"
+    argocd.argoproj.io/compare-options: IgnoreExtraneous
   labels:
     console.openshift.io/terminal: "true"
   generateName: terminal-
