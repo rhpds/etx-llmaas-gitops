@@ -10,7 +10,7 @@ metadata:
     argocd.argoproj.io/hook: Sync
     argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
   labels:
-    console.openshift.io/terminal: "true"
+    console.openshift.io/terminal: 'true'
   #generateName: terminal-
   name: web-terminal
   namespace: openshift-terminal
