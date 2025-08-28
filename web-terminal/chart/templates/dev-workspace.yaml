@@ -52,7 +52,9 @@ spec:
         plugin:
           kubernetes:
             name: web-terminal-tooling
+            namespace: openshift-operators
       - name: web-terminal-exec
         plugin:
           kubernetes:
             name: web-terminal-exec
+            namespace: openshift-operators
