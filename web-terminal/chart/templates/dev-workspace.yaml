@@ -5,9 +5,9 @@ metadata:
   annotations:
     controller.devfile.io/devworkspace-source: web-terminal
     controller.devfile.io/restricted-access: "true"
-    argocd.argoproj.io/sync-options: Force=true,Replace=true,SkipDryRunOnMissingResource=true
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
     argocd.argoproj.io/sync-wave: "3"
-    argocd.argoproj.io/hook: Sync
+    argocd.argoproj.io/hook: PostSync
     argocd.argoproj.io/hook-delete-policy: Failed
   labels:
     console.openshift.io/terminal: "true"
