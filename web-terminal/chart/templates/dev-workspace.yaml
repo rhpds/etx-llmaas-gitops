@@ -8,6 +8,7 @@ metadata:
     argocd.argoproj.io/sync-options: Replace=true
     argocd.argoproj.io/sync-wave: "3"
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+    argocd.argoproj.io/compare-options: IgnoreExtraneous
   labels:
     console.openshift.io/terminal: "true"
 #  name: terminal-djbjt # FIXME DOES NOT WORK WITH OPERATOR and without it we hit https://github.com/kubernetes-sigs/kustomize/issues/641
