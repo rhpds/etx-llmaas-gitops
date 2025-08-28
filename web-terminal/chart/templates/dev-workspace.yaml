@@ -4,7 +4,6 @@ kind: DevWorkspace
 metadata:
   annotations:
     controller.devfile.io/devworkspace-source: web-terminal
-    controller.devfile.io/restricted-access: 'true'
     argocd.argoproj.io/sync-options: Replace=true,SkipDryRunOnMissingResource=true
     argocd.argoproj.io/sync-wave: "3"
     argocd.argoproj.io/hook: Sync
