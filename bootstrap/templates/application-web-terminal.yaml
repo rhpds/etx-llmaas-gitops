@@ -19,3 +19,25 @@ spec:
     server: https://kubernetes.default.svc
   syncPolicy:
     automated: {}
+---
+# cannot be a kustomize app - https://github.com/kubernetes-sigs/kustomize/issues/641
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: web-terminal-chart
+  namespace: openshift-gitops
+  annotations:
+    argocd.argoproj.io/sync-options: Validate=false
+  labels:
+      component: bootstrap
+      purpose: web-terminal
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/rhpds/etx-llmaas-gitops
+    targetRevision: main
+    path: web-terminal/chart
+  destination:
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated: {}
