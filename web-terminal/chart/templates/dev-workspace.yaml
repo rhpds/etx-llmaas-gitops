@@ -11,7 +11,8 @@ metadata:
     argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
   labels:
     console.openshift.io/terminal: "true"
-  generateName: terminal-
+  #generateName: terminal-
+  name: web-terminal
   namespace: openshift-terminal
 spec:
   routingClass: web-terminal
