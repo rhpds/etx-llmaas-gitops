@@ -38,6 +38,7 @@ apiVersion: workspace.devfile.io/v1alpha2
 kind: DevWorkspace
 metadata:
   name: web-terminal
+  namespace: openshift-terminal
   labels:
     console.openshift.io/terminal: 'true'
   annotations:
