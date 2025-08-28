@@ -26,9 +26,6 @@ spec:
           components:
           - container:
               image: quay.io/eformat/web-terminal:latest-x86_64
-              env:
-                - name: DEVWORKSPACE_IDLE_TIMEOUT
-                  value: 3hr
             name: web-terminal-tooling
       - name: web-terminal-exec
         plugin:
