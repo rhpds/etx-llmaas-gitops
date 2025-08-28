@@ -3,13 +3,4 @@ kind: Kustomization
 
 resources:
   - subscription.yaml
-  - dev-workspace.yaml
-
-# https://github.com/argoproj/argo-cd/issues/1639#issuecomment-494999921
-# patchesJson6902:
-# - path: patch-dev-workspace.yaml
-#   target:
-#     group: workspace.devfile.io
-#     version: v1alpha2
-#     kind: DevWorkspace
-#     name: terminal-djbjt
+#  - dev-workspace.yaml
