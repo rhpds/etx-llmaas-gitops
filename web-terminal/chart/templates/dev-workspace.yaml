@@ -8,6 +8,7 @@ metadata:
     argocd.argoproj.io/sync-options: Force=true,Replace=true,SkipDryRunOnMissingResource=true
     argocd.argoproj.io/sync-wave: "3"
     argocd.argoproj.io/hook: Skip
+    argocd.argoproj.io/hook-delete-policy: Failed
   labels:
     console.openshift.io/terminal: "true"
   generateName: terminal-
