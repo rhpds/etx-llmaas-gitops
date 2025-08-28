@@ -9,7 +9,6 @@ metadata:
     argocd.argoproj.io/sync-wave: "3"
   labels:
     console.openshift.io/terminal: "true"
-#  name: terminal-djbjt # FIXME DOES NOT WORK WITH OPERATOR and without it we hit https://github.com/kubernetes-sigs/kustomize/issues/641
   generateName: terminal-
   namespace: openshift-terminal
 spec:
