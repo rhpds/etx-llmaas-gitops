@@ -9,6 +9,7 @@ metadata:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
   labels:
     console.openshift.io/terminal: "true"
+  name: terminal-djbjt
   generateName: terminal-
   namespace: openshift-terminal
 spec:
