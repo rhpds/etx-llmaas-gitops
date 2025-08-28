@@ -1,19 +1,47 @@
+# ---
+# apiVersion: workspace.devfile.io/v1alpha2
+# kind: DevWorkspace
+# metadata:
+#   annotations:
+#     controller.devfile.io/devworkspace-source: web-terminal
+#     controller.devfile.io/restricted-access: 'true'
+#     argocd.argoproj.io/sync-options: Replace=true,SkipDryRunOnMissingResource=true
+#     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+#     argocd.argoproj.io/sync-wave: "3"
+#     argocd.argoproj.io/hook: Sync
+#     argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
+#   labels:
+#     console.openshift.io/terminal: 'true'
+#   generateName: terminal-
+#   namespace: openshift-terminal
+# spec:
+#   routingClass: web-terminal
+#   started: true
+#   template:
+#     components:
+#       - name: web-terminal-tooling
+#         plugin:
+#           kubernetes:
+#             name: web-terminal-tooling
+#             namespace: openshift-operators
+#           components:
+#           - container:
+#               image: quay.io/eformat/web-terminal:latest-x86_64
+#             name: web-terminal-tooling
+#       - name: web-terminal-exec
+#         plugin:
+#           kubernetes:
+#             name: web-terminal-exec
+#             namespace: openshift-operators
 ---
 apiVersion: workspace.devfile.io/v1alpha2
 kind: DevWorkspace
 metadata:
-  annotations:
-    controller.devfile.io/devworkspace-source: web-terminal
-    controller.devfile.io/restricted-access: 'true'
-    argocd.argoproj.io/sync-options: Replace=true,SkipDryRunOnMissingResource=true
-    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
-    argocd.argoproj.io/sync-wave: "3"
-    argocd.argoproj.io/hook: Sync
-    argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
+  name: web-terminal
   labels:
     console.openshift.io/terminal: 'true'
-  generateName: terminal-
-  namespace: openshift-terminal
+  annotations:
+    controller.devfile.io/restricted-access: 'true'
 spec:
   routingClass: web-terminal
   started: true
@@ -23,13 +51,7 @@ spec:
         plugin:
           kubernetes:
             name: web-terminal-tooling
-            namespace: openshift-operators
-          components:
-          - container:
-              image: quay.io/eformat/web-terminal:latest-x86_64
-            name: web-terminal-tooling
       - name: web-terminal-exec
         plugin:
           kubernetes:
             name: web-terminal-exec
-            namespace: openshift-operators
