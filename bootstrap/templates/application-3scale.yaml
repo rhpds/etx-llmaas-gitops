@@ -43,16 +43,7 @@ spec:
           users:
           - name: user1
             password: openshift
-            service: granite-3dot2-8b-instruct
-          - name: user2
-            password: openshift
-            service: granite-3dot2-8b-instruct
-          - name: user3
-            password: openshift
-            service: granite-3dot2-8b-instruct
-          - name: user9
-            password: openshift
-            service: granite-3dot2-8b-instruct
+            service: llama-32-1b-instruct-cpu
     - repoURL: https://github.com/rhpds/etx-llmaas-gitops
       targetRevision: main
       ref: values
