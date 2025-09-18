@@ -10,7 +10,7 @@ The current *overlays* available are for the following channels:
 
 We maintain a custom web terminal image for ETX as well as attach PVC storage to the web-terminal.
 
-Most custom configurations are set in [web-terminal-tooling-template.yaml](web-terminal/chart/templates/web-terminal-tooling-template.yaml) and the image itself.
+Most custom configurations are set in [web-terminal-tooling-template.yaml](chart/templates/web-terminal-tooling-template.yaml) and the image itself.
 
 ## Usage
 
