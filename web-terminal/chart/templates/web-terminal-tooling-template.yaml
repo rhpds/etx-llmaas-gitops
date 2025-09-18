@@ -9,6 +9,8 @@ metadata:
   labels:
     console.openshift.io/terminal: 'true'
 spec:
+  attributes:
+    controller.devfile.io/storage-type: per-workspace
   components:
     - container:
         args:
@@ -22,4 +24,10 @@ spec:
         memoryRequest: 128Mi
         mountSources: false
         sourceMapping: /projects
+        volumeMounts:
+          - name: home-storage
+            path: /home/user
       name: web-terminal-tooling
+    - name: home-storage
+      volume:
+        ephemeral: false
