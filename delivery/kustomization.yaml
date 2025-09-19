@@ -10,3 +10,4 @@ resources:
 - ./image-puller-workers/
 - ./multi-node-setup/
 - namespace.yaml
+- 3scale-network-policy.yaml
