@@ -39,4 +39,7 @@ spec:
   destination:
     server: https://kubernetes.default.svc
   syncPolicy:
-    automated: {}
+    automated:
+      selfHeal: true
+    syncOptions:
+      - Validate=true
