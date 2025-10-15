@@ -23,9 +23,9 @@ spec:
     - name: Standard
       resources:
         limits:
-          cpu: '8'
+          cpu: '4'
           memory: 16Gi
         requests:
           cpu: '4'
-          memory: 8Gi
+          memory: 16Gi
   templateOrder: []
